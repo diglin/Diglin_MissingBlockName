@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Diglin GmbH - Switzerland
+ *
+ * @author      Sylvain Rayé <support at diglin.com>
+ * @category    Diglin
+ * @package     Diglin_MissingBlockName
+ * @copyright   Copyright (c) 2011-2017 Diglin (http://www.diglin.com)
+ */
+
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Diglin_MissingBlockName" setup_version="1.0.0" />
+</config>
