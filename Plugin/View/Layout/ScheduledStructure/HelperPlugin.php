@@ -29,8 +29,9 @@ class HelperPlugin
         \Magento\Framework\View\Layout\Element $currentNode,
         \Magento\Framework\View\Layout\Element $parentNode
     ) {
-        if (!$currentNode->getAttribute('name') && $currentNode->getAttribute('as')) {
-            $currentNode->setAttribute('name', $currentNode->getAttribute('as'));
+        if (!$currentNode->getAttribute('name') && $currentNode->getAttribute('as') && $currentNode->getAttribute('class')) {
+            $class = str_replace('\\', '_', $currentNode->getAttribute('class')); // Prevent duplicate name
+            $currentNode->setAttribute('name', strtolower($class) . '_' . $currentNode->getAttribute('as'));
         }
 
         return [$scheduledStructure, $currentNode, $parentNode];
